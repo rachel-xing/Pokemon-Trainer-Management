@@ -34,17 +34,15 @@ export const AuthProvider = ({ children }) => {
                 throw new Error('No authentication token received')
             }
 
-            const userRole = data.roles?.[0]?.name || ''
+            const userRole = data.roles?.[ 0 ]?.name || ''
             setIsAuthenticated(true)
 
             localStorage.setItem('token', data.token)
             localStorage.setItem('username', data.username)
-            localStorage.setItem('role',userRole)
-
-
+            localStorage.setItem('role', userRole)
         }
         catch (error) {
-            console.error('Error occurred', error)
+            console.error('Error occurred', error.message)
             setError(error.message)
             throw error
         } finally {
