@@ -107,10 +107,10 @@ const Login = () => {
                                 <div className="flex items-center justify-center">
                                     <div
                                         className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                                    登录中...
+                                    Loading...
                                 </div>
                             ) : (
-                                '登录'
+                                'Login'
                             ) }
                         </button>
                     </form>
